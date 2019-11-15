@@ -3,6 +3,9 @@ import static java.lang.System.out;
 
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
+        if(nums.length == 0|| k == 0){
+            return nums;
+        }
         int idx = 0;
         int[] ans = new int[nums.length-k+1];
         PriorityQueue<Integer> q = new PriorityQueue<>(new Comparator<Integer>(){
